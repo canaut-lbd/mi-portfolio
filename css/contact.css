@@ -1,0 +1,32 @@
+#contacto-home {
+  margin-top:2%;
+  height: 20vh;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frase-contacto {
+  display: flex;
+  justify-content: center;
+}
+.frase-contacto p {
+  width: 100%;
+  font-family: "NeueWorld", serif;
+  font-size: clamp(1rem, 2vw, 3.5rem);
+  text-align: center;
+}
+
+.cuentamela {
+  color: black;
+  text-decoration: underline;
+
+  &:hover {
+    color: #d3a14b;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-underline-offset: 2px;
+    text-decoration-color: #d3a14b;
+  }
+}

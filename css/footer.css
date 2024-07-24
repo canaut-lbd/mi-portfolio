@@ -1,0 +1,54 @@
+/*
+
+FOOTER
+
+*/
+
+
+#footer {
+  height: 10%;
+  color: #000000;
+}
+
+.social-media {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  padding: 20px;
+}
+
+.social-media li {
+  /* font-family: Montreal, sans-serif; */
+  font-family: "NeueWorld", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+  📝📝📝📝📝
+
+  Veo que los iconos no acaban de ser muy compatibles, los tamaños no son del todo iguales
+  y eso hace que no se alineen correctamente.
+
+  Aun usando correctamente el codigo, tendrias que ir icono por icono y retocar margenes
+  concretos para cada uno para que quede bien.
+
+  Una alternativa seria ir a una galeria de iconos y bajarte 3 de la misma familia para
+  que todos tengan el mismo "canvas" para entendernos y que así todos queden perfect 😊
+
+  https://www.iconfinder.com/iconsets/picons-social por ejemplo
+*/
+.sm-icon {
+  padding-right: 6px;
+  width: auto;
+  height: 20px;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .social-media li {
+    font-size: 20px;
+  }
+}

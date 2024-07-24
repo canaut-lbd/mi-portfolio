@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcfaf5;
+  color: black;
+  width: 100vw;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: underline;
+
+  &:hover {
+    text-underline-position: under;
+    text-underline-offset: 3px;
+    text-decoration-color: #d3a14b;
+  }
+}
+
+#sobre-mi,
+#proyectos,
+#detalle-proyecto {
+  margin-top: 80px;
+}
+
+.titulo-cabecera {
+  padding: 20px;
+}
+
+.Page-title {
+  font-family: "NeueWorld", serif;
+  font-weight: 300;
+  font-size: clamp(2.5rem, 12vw, 15rem);
+  line-height: 1.2;
+}
+
+.divider {
+  margin-inline: 40px;
+  border: solid 0.5px #dedede;
+  margin-block: 40px;
+}
+
+.divider-cabecera {
+  margin-inline: 40px;
+  border: solid 0.5px #dedede;
+  margin-block: 16px;
+}
+
+/* Blend modes*/
+
+.bm-darken{
+  mix-blend-mode:screen;
+}

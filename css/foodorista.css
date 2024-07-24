@@ -1,0 +1,129 @@
+body.proyecto .Page-title {
+  padding-left: 20px;
+  line-height: 1;
+}
+
+.detalles {
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right:2%;
+}
+
+.imagen-1-wrapper {
+  position:relative;
+  width:100%;
+  aspect-ratio:1/0.5;
+  max-height:450px;
+}
+
+.imagen-1 {
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-position: center;
+  object-fit:cover;
+}
+
+.imagen-1:nth-child(3) {
+  object-position: bottom;
+}
+
+.texto-experiencia {
+  padding-top:12px;
+}
+
+.texto-experiencia:last-child{
+  padding-bottom:30px;
+}
+
+.apartado {
+  padding-left:50px;
+  padding-right:2%;
+}
+.titulo-apartado {
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+.circulo {
+  width:100px;
+  height:auto;
+  aspect-ratio:1;
+}
+.titulo-apartado h3{
+  padding-left:20px;
+  font-weight:400;
+  line-height:1;
+  font-size: clamp(1.5rem,3vw,4rem);
+}
+.texto-apartado p{
+  padding-block:20px;
+  padding-right:5%;
+}
+
+.solucion-container {
+  display:flex;
+  justify-content:center;
+}
+.imagen-solucion-wrapper {
+  position:relative;
+  width:50%;
+  aspect-ratio:9/16;
+}
+
+.imagen-solucion {
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-position: top center;
+  object-fit:contain;
+}
+
+.nav-inferior-wrapper {
+  margin-inline:10%;
+  display:flex;
+  justify-content:center;
+}
+
+.nav-inferior {
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+
+  @media (max-width:700px) {
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+  }
+}
+.arrow-left,.arrow-right{
+  width:64px;
+  @media (max-width:700px) {
+    width:48px;
+}
+}
+
+.arrow-left{
+  rotate:180deg;
+}
+
+.btn-nav-anterior, .btn-nav-siguiente{
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:center;
+  gap:12px;
+  &:hover {
+    transform:scale(1.25);
+    color:goldenrod;
+  }
+}
+
+.texto-nav-inferior{
+  font-size:1.2rem;
+  font-weight:400;
+}

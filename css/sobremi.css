@@ -1,0 +1,188 @@
+/*Sección presentación*/
+
+.presentacion {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.imagen-presentacion {
+  width: 100%;
+  height: auto;
+}
+
+.imagen-presentacion img {
+  width: 100%;
+  /* height: auto; */
+
+  /*
+  📝📝📝📝📝
+
+  Para que las imagenes respeten el ASPECT RATIO que defines just abajo
+  los valores de WIDTH y HEIGHT deben ser 100% y 100% respectivamente.
+  */
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.texto-presentacion p {
+  font-weight: 400;
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .presentacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .imagen-presentacion {
+    min-width: 300px;
+  }
+
+  .texto-presentacion {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .texto-presentacion p:first-child {
+    padding-top: 0px;
+  }
+}
+/* @media (min-width: 600px) and (max-width: 1400px) {
+  .presentacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1200px;
+  }
+
+  .imagen-presentacion {
+    width: 30%;
+    height: auto;
+    aspect-ratio:1/1;
+  }
+  .imagen-presentacion img {
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+  }
+
+  .texto-presentacion {
+    width: 70%;
+    padding: 0 30px;
+  }
+
+  .texto-presentacion p {
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .presentacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1800px;
+  }
+
+  .imagen-presentacion {
+    width: 40%;
+    height: 500px;
+    aspect-ratio:16/9;
+  }
+  .imagen-presentacion img {
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+  }
+  .texto-presentacion {
+    width: 70%;
+    padding: 0 30px;
+  }
+
+  .texto-presentacion p {
+
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+} */
+/*--------------Sección Experiencia y Formación------------*/
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-size: calc(32px + 0.25vh);
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+#experiencia,
+#formacion {
+  height: 30%;
+}
+.experiencia-wrapper,
+.formacion-wrapper {
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.experiencia-item,
+.formacion-item {
+  padding: 30px 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid #dedede;
+}
+.texto-experiencia,
+.texto-formacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.experiencia-wrapper .experiencia-item:last-child,
+.formacion-wrapper .formacion-item:last-child {
+  border-bottom: 1px solid #dedede;
+}
+
+.left {
+  font-family: NeueWorld, serif;
+  font-weight: 200;
+  font-size: calc(32px + 0.5vh);
+}
+
+.texto-experiencia h4,
+.texto-formacion h4 {
+  font-weight: 600;
+  font-size: calc(14px + 0.5vh);
+}
+
+.texto-experiencia p,
+.texto-formacion p {
+  font-weight: 400;
+  font-size: calc(12px + 0.5vh);
+}
+
+@media (min-width: 900px) and (max-width: 2200px) {
+  .experiencia-item,
+  .formacion-item {
+    flex-direction: row;
+  }
+  .texto-experiencia,
+  .texto-formacion {
+    width: 25%;
+  }
+}

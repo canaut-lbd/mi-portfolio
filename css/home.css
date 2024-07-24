@@ -1,0 +1,161 @@
+/*-----------------------HERO-----------------------*/
+
+/*
+  📝📝📝📝📝
+
+  Te propongo una cosa, para practicar un poco flexbox/posiciones relative/absolutes
+
+  Aun estando bien el codigo y planteamiento
+  del hero, se puede mejorar y dejarlo un poco más limpio :)
+
+  La idea seria la siguiente:
+
+  #hero
+   - Hace 100% de with
+   - 100vh de height
+   - flex column y centrar verticalmente para que el título/subtítulo queden verticalmente centrados
+
+  #hero-wrap
+    - no nos haria falta este div
+
+  .hero-info
+    - Está ok
+
+
+  .scroll
+  - posicion absoluta bottom 0 / left y right 0
+
+
+
+  La idea es que el propio div de #HERO ya determina el espacio y alinea el contenido verticalmente
+
+  y el scroll al ser absolute i al bottom, se queda fijo en la parte inferior de la pantalla "sin ocupar espacio"
+  y a su vez evitamos este valor 70% de height que hay en el hero-wrap que es un poco confuso.
+
+*/
+
+#hero {
+  background-color: #000000;
+  color: #f8f8f8;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-info {
+  position:relative;
+  padding: 40px;
+  text-align: center;
+}
+
+.hero-info h1 {
+  font-family: "NeueWorld", serif;
+  font-weight: 100;
+  font-size: clamp(5rem, 12vw, 12rem);
+  line-height: 0.8;
+}
+
+.hero-subtitle {
+  padding: 12px 0px;
+  font-family: "NeueWorld", serif;
+  font-weight: 100;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.scroll {
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.scroll-icon {
+  width: auto;
+  height: 80px;
+}
+
+.scroll-word {
+  font-family: "NeueWorld", serif;
+  font-size: 1rem;
+}
+
+/*--------------------PROYECTOS HOME-----------------------*/
+
+.proyecto {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5%;
+  border-bottom: 1px solid #9b8052;
+  position:relative;
+  &:hover{
+    color:#f8f8f8;
+  }
+}
+
+.proyect-text {
+  z-index:30;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 40%;
+  font-family: "NeueWorld", serif;
+}
+
+.contenedor-imagen{
+  z-index:15;
+  position:absolute;
+  width:100%;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity:0;
+  aspect-ratio:1/0.5;
+  transition:opacity 0.3s ease; 
+}
+
+.bm-multiply {
+  z-index:20;
+  position:absolute;
+  width:100%;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity:0.4;
+  background-color: #000000;
+  mix-blend-mode:multiply;
+}
+
+.proyecto:hover .contenedor-imagen {
+  opacity:1;
+}
+
+.imagen-hover{
+  z-index:10;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position: center;
+}
+
+
+.tipo-proyecto {
+  font-family: "NeueWorld", serif;
+  font-weight: 100;
+  font-size: clamp(0.75rem, 4vw, 2rem);
+}
+
+.titulo-proyecto {
+  font-family: "NeueWorld", serif;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
